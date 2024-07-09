@@ -1,0 +1,32 @@
+# when using the default proxy server port
+local_backend: true
+
+backend:
+  name: git-gateway
+media_folder: public/assets/images
+public_folder: "/assets/images"
+editor:
+  preview: false
+collections:
+  - name: "landing-pages"
+    label: "Landing Pages"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "src/content/landing-pages/home.md"
+        fields:
+          - { name: "title", label: "Title", widget: "string" }
+  - name: "blog"
+    label: "Blog"
+    folder: src/content/blogs
+    create: true
+    fields:
+      - { label: "Slug", name: "slug", widget: "string" }
+      - label: "Hero Image"
+        name: "heroImage"
+        widget: "object"
+        fields:
+          - { label: "src", name: "src", widget: "image" }
+          - { label: "alt", name: "alt", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }

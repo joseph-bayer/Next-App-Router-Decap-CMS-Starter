@@ -1,0 +1,16 @@
+@use "./variables" as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color: $offBlack;
+}
+
+.homepage-title {
+  font-family: var(--font-josefin-sans);
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+}
