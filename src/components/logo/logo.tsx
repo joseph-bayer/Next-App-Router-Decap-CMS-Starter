@@ -25,6 +25,9 @@ export default function Logo({ spinOnHover }: LogoProps) {
         height={60}
         width={60}
         placeholder="blur"
+        style={{
+          objectFit: "contain",
+        }}
       />
       <span className="font-indie-flower text-6xl text-dragonBall">wdy!</span>
     </div>

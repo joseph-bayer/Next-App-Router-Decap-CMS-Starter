@@ -10,7 +10,7 @@ interface HeroProps {
 export default function Hero({ homepageAttributes }: HeroProps) {
   return (
     <section className="flex flex-col items-center gap-4 relative w-full">
-      <div className="relative w-full h-full px-16 py-32">
+      <div className="relative w-full h-full px-16 py-40">
         {/* BG Image */}
         <Image
           src={DesertNight}
