@@ -1,0 +1,44 @@
+@use "../../styles/variables" as *;
+
+.homepageTitle {
+  color: $dragonBall;
+  font-family: var(--font-indie-flower);
+  font-weight: 900;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.speechBubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 4rem 3rem 3.5rem 3rem;
+  border-radius: 9999px;
+  height: fit-content;
+  position: relative;
+  top: -50px;
+
+  .speechBubbleText {
+    font-size: 3rem;
+    font-family: var(--font-indie-flower);
+    color: $dragonBall;
+  }
+
+  // Speech Bubble Tail
+  &:after {
+    content: "";
+    position: absolute;
+    left: 60px;
+    top: 75%;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-right-color: white;
+    border-left: 0;
+    border-bottom: 0;
+    margin-top: -10px;
+    margin-left: -50px;
+    transform: rotate(-22.5deg);
+  }
+}

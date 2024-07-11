@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@import "./animations";
 
 @tailwind base;
 @tailwind components;
@@ -8,9 +9,7 @@ html {
   color: $offBlack;
 }
 
-.homepage-title {
-  font-family: var(--font-josefin-sans);
-  font-weight: bold;
-  font-size: 3rem;
-  text-align: center;
+// Utility Classes
+.fuzzy-glass {
+  backdrop-filter: saturate(180%) blur(20px);
 }

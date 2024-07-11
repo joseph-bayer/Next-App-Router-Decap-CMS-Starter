@@ -6,7 +6,7 @@ interface DebugHelperProps {
 
 export default function DebugHelper({ data }: DebugHelperProps) {
   return (
-    <pre className="my-2 overflow-x-auto rounded-xl bg-gray-200 p-4">
+    <pre className="max-w-xl my-2 overflow-x-auto rounded-xl bg-gray-200 p-4">
       {JSON.stringify(data, null, 2)}
     </pre>
   );
