@@ -1,5 +1,9 @@
 .animate-bob {
-  animation: MoveUpDown 7s ease-in-out infinite;
+  animation: MoveUpDown 5s ease-in-out infinite;
+}
+
+.animate-widen-narrow {
+  animation: WidenNarrow 5s ease-in-out infinite;
 }
 
 .animate-wind-up-spin {
@@ -30,5 +34,17 @@
   }
   100% {
     transform: translate(0, -0px);
+  }
+}
+
+@keyframes WidenNarrow {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+  50% {
+    transform: scaleX(2) scaleY(1.2);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
   }
 }

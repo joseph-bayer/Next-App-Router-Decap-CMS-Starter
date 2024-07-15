@@ -3,8 +3,8 @@ local_backend: true
 
 backend:
   name: git-gateway
-media_folder: public/assets/images
-public_folder: "/assets/images"
+media_folder: public/decap-assets/images
+public_folder: "/decap-assets/images"
 editor:
   preview: false
 collections:

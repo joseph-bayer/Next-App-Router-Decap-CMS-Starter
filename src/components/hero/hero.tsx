@@ -26,14 +26,19 @@ export default function Hero({ homepageAttributes }: HeroProps) {
 
         <div className="flex flex-row gap-x-8 relative justify-center">
           {/* Cowboy Monkey */}
-          <Image
-            src={MonkeyCowboyImage}
-            alt="Image of a Cowboy Monkey"
-            height={300}
-            width={300}
-            placeholder="blur"
-            className="animate-bob relative"
-          />
+          <div className="relative">
+            <Image
+              src={MonkeyCowboyImage}
+              alt="Image of a Cowboy Monkey"
+              height={300}
+              width={300}
+              placeholder="blur"
+              className="animate-bob relative"
+            />
+            <div
+              className={`animate-widen-narrow absolute bottom-[-60px] left-0 right-0 w-[50%] h-[50px] rounded-[50%] mx-auto ${styles.floatingHeadShadow}`}
+            ></div>
+          </div>
 
           {/* Speech Bubble */}
           <div className={`${styles.speechBubble}`}>

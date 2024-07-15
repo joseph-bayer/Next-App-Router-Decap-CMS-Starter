@@ -21,7 +21,7 @@ export default function Logo({ spinOnHover }: LogoProps) {
       <Image
         src={MonkeyCowboyImage}
         alt="Monkey Cowboy Logo"
-        className={`${isHovered ? "animate-wind-up-spin" : ""}`}
+        className={`${spinOnHover && isHovered ? "animate-wind-up-spin" : ""}`}
         height={60}
         width={60}
         placeholder="blur"
