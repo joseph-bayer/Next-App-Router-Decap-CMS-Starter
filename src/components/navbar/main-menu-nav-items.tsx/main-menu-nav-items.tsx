@@ -5,6 +5,7 @@ import { attributes as MainMenuAttributes } from "../../../content/site-settings
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import styles from "./main-menu-nav-items.module.scss";
 
 interface MainMenuNavItemsProps {}
 
@@ -18,7 +19,7 @@ export default function MainMenuNavItems({}: MainMenuNavItemsProps) {
               <li key={`${navItem.type}-${index}`}>
                 <Link
                   href={navItem.relativeUrl}
-                  className="text-2xl lowercase font-bold text-vegeta hover:text-dragonBall hover:underline"
+                  className={`text-2xl lowercase font-bold text-vegeta hover:text-dragonBall ${styles.navLink}`}
                 >
                   {navItem.title}
                 </Link>
@@ -52,9 +53,13 @@ export default function MainMenuNavItems({}: MainMenuNavItemsProps) {
                         >
                           <Link
                             href={link.relativeUrl}
-                            className="text-2xl lowercase font-bold px-8 py-2 text-vegeta hover:text-offWhite hover:underline data-[focus]:text-offWhite data-[focus]:underline data-[focus]:bg-dragonBall"
+                            className="group text-2xl lowercase font-bold px-8 pt-2 pb-4 text-vegeta hover:text-offWhite data-[focus]:text-offWhite data-[focus]:bg-dragonBall"
                           >
-                            {link.title}
+                            <span
+                              className={`${styles.navLink} ${styles.dropdownNavLink}`}
+                            >
+                              {link.title}
+                            </span>
                           </Link>
                         </MenuItem>
                       );

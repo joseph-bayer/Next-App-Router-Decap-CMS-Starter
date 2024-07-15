@@ -1,0 +1,31 @@
+@use "../../../styles/variables" as *;
+
+.navLink {
+  position: relative;
+  &::after {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: $dragonBall;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in;
+    transition-property: all;
+    content: "";
+  }
+  &:hover::after,
+  &:focus::after,
+  &[data-focus]::after {
+    width: 100%;
+  }
+}
+
+[data-focus] {
+  > .navLink {
+    &.dropdownNavLink::after {
+      width: 100%;
+      background-color: white;
+    }
+  }
+}
