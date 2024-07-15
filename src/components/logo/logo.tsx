@@ -17,7 +17,12 @@ export default function Logo({ spinOnHover }: LogoProps) {
       onMouseOver={() => setIsHovered(true)}
       onAnimationEnd={() => setIsHovered(false)}
     >
-      <span className="font-indie-flower text-6xl text-dragonBall">H</span>
+      <span
+        className="font-indie-flower text-6xl text-dragonBall"
+        aria-hidden="true"
+      >
+        H
+      </span>
       <Image
         src={MonkeyCowboyImage}
         alt="Monkey Cowboy Logo"
@@ -28,8 +33,15 @@ export default function Logo({ spinOnHover }: LogoProps) {
         style={{
           objectFit: "contain",
         }}
+        aria-hidden={true}
       />
-      <span className="font-indie-flower text-6xl text-dragonBall">wdy!</span>
+      <span
+        className="font-indie-flower text-6xl text-dragonBall"
+        aria-hidden={true}
+      >
+        wdy!
+      </span>
+      <span className="sr-only">Logo for Howdy!</span>
     </div>
   );
 }

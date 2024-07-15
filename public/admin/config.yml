@@ -30,3 +30,33 @@ collections:
           - { label: "alt", name: "alt", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Content", name: "content", widget: "markdown" }
+  - name: "site-settings"
+    label: "Site Settings"
+    files:
+      - label: "Main Menu"
+        name: "main-menu"
+        file: "src/content/site-settings/main-menu.md"
+        fields:
+          - label: "Nav Items"
+            name: "navItems"
+            widget: list
+            types:
+              - label: "Link"
+                name: "link"
+                widget: object
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title" }
+                  - { label: "Relative URL", name: "relativeUrl" }
+              - label: "Dropdown"
+                name: "dropdown"
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title" }
+                  - label: "Links"
+                    name: "links"
+                    widget: list
+                    fields:
+                      - { label: "Title", name: "title" }
+                      - { label: "Relative URL", name: "relativeUrl" }
