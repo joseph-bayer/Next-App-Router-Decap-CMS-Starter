@@ -8,7 +8,7 @@ export default function Navbar({}: NavbarProps) {
   return (
     <nav className="sticky top-0 z-10 bg-superSaiyan shadow-xl">
       <div className="flex flex-row px-8 py-2 relative">
-        {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-gray-200 to-transparent"></div> */}
+        {/* Logo Homepage Link */}
         <Link href="/" className="z-[11]">
           <Logo spinOnHover={true} />
         </Link>

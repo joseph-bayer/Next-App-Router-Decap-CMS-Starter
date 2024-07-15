@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import MonkeyCowboyImage from "../../assets/monkey_cowboy_logo.png";
+import MonkeyCowboyImage from "../../assets/images/monkey_cowboy_logo.png";
 import { useState } from "react";
 
 interface LogoProps {

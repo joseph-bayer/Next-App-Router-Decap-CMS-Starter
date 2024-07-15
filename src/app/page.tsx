@@ -2,8 +2,8 @@ import { attributes as HomepageAttributes } from "../content/landing-pages/home.
 import DebugHelper from "@/components/debug-helper/debug-helper";
 import Hero from "@/components/hero/hero";
 import Image from "next/image";
-import WolfCactusImage from "../assets/wolf_by_cactus.png";
-import ChickenCowboyImage from "../assets/chicken_cowboy.png";
+import WolfCactusImage from "../assets/images/wolf_by_cactus.png";
+import ChickenCowboyImage from "../assets/images/chicken_cowboy.png";
 
 export default function Home() {
   return (

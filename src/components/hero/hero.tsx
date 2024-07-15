@@ -1,6 +1,6 @@
 import Image from "next/image";
-import MonkeyCowboyImage from "../../assets/monkey_cowboy_logo.png";
-import DesertNight from "../../assets/desert_night.jpg";
+import MonkeyCowboyImage from "../../assets/images/monkey_cowboy_logo.png";
+import DesertNight from "../../assets/images/desert_night.jpg";
 import styles from "./hero.module.scss";
 
 interface HeroProps {
