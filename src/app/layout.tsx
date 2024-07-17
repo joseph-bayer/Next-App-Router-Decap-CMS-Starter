@@ -32,7 +32,7 @@ export default function RootLayout({
       lang="en"
       className={`${josefin_sans_font.variable} ${indie_flower_font.variable}`}
     >
-      <body>
+      <body className="min-h-screen">
         <GlobalContextWrapper>
           <Navbar />
           {children}

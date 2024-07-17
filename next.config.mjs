@@ -9,6 +9,9 @@ const nextConfig = {
     });
     return cfg;
   },
+  images: {
+    domains: ["upload.wikimedia.org"],
+  },
 };
 
 const bundleAnalyzer = withBundleAnalyzer({

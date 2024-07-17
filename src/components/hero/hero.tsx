@@ -1,6 +1,6 @@
 import Image from "next/image";
 import MonkeyCowboyImage from "../../assets/images/monkey_cowboy_logo.png";
-import DesertNight from "../../assets/images/desert_night.jpg";
+import Desert from "../../assets/images/arizona_bg.avif";
 import styles from "./hero.module.scss";
 
 interface HeroProps {
@@ -10,10 +10,10 @@ interface HeroProps {
 export default function Hero({ homepageAttributes }: HeroProps) {
   return (
     <section className="flex flex-col items-center gap-4 relative w-full">
-      <div className="relative w-full h-full px-16 py-40">
+      <div className="relative w-full h-full px-16 py-48">
         {/* BG Image */}
         <Image
-          src={DesertNight}
+          src={Desert}
           alt="Image of the desert at night"
           fill
           placeholder="blur"
