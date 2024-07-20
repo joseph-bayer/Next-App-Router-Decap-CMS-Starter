@@ -22,6 +22,9 @@ const config: Config = {
         "josefin-sans": ["var(--font-josefin-sans)"],
         "indie-flower": ["var(--font-indie-flower)"],
       },
+      height: {
+        navHeight: "76px",
+      },
     },
   },
   plugins: [],

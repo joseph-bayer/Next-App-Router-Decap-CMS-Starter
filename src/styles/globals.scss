@@ -8,6 +8,8 @@
 
 html {
   color: $offBlack;
+  scroll-behavior: smooth;
+  scroll-padding-top: $navHeight;
 }
 
 // Utility Classes
