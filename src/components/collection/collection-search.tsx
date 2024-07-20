@@ -56,7 +56,7 @@ export default function CollectionSearch({ onSubmit }: CollectionSearchProps) {
           <a
             href="#collection-list"
             onClick={() => setShowSeeResultsLink(false)}
-            className="flex flex-col gap-2 items-center text-superSaiyan hover:text-vegeta"
+            className="flex flex-col items-center text-superSaiyan hover:text-vegeta"
           >
             <span className="text-3xl uppercase font-bold">See Results</span>
             <ChevronDownIcon className="animate-bob h-auto w-12 stroke-2" />

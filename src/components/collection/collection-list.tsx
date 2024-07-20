@@ -29,7 +29,7 @@ export default function CollectionList({ blogsToShow }: CollectionListProps) {
             return (
               <Link
                 href={`/blogs/${blog.slug}`}
-                className="max-w-[300px] mx-auto md:mx-[unset] hover:scale-110 transition-transform duration-300 ease-in-out"
+                className="animate-fade-in fade-in-2s max-w-[300px] mx-auto md:mx-[unset] hover:scale-110 transition-transform duration-300 ease-in-out"
                 key={`${blog.slug}-${index}`}
               >
                 <Image
