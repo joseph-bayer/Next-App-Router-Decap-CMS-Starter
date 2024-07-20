@@ -4,7 +4,7 @@ import { BlogData } from "@/interfaces/BlogData";
 import CollectionList from "./collection-list";
 import CollectionPager from "./collection-pager";
 import CollectionSearch from "./collection-search";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface CollectionProps {
   allBlogsData: BlogData[];
@@ -15,6 +15,8 @@ export default function Collection({ allBlogsData }: CollectionProps) {
   const [filteredBlogsData, setFilteredblogsData] = useState<BlogData[]>([]);
   const [page, setPage] = useState(0);
   const [numberOfPages, setNumberOfPages] = useState<number>();
+
+  const searchInputRef = useRef(null);
 
   const itemsPerPage = 12;
 
@@ -51,11 +53,16 @@ export default function Collection({ allBlogsData }: CollectionProps) {
 
   return (
     <div className="relative">
-      <CollectionSearch onSubmit={(keywords) => setSearchKeywords(keywords)} />
+      <CollectionSearch
+        onSubmit={(keywords) => setSearchKeywords(keywords)}
+        searchInputRef={searchInputRef}
+      />
 
-      {!!filteredBlogsData.length && (
-        <CollectionList blogsToShow={filteredBlogsData} />
-      )}
+      <CollectionList
+        blogsToShow={filteredBlogsData}
+        keywords={searchKeywords}
+        searchInputRef={searchInputRef}
+      />
 
       {!!numberOfPages && (
         <CollectionPager

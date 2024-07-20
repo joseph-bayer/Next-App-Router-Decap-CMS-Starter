@@ -4,13 +4,17 @@ import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { MutableRefObject, useState } from "react";
 
 interface CollectionSearchProps {
   onSubmit: (keywords: string) => void;
+  searchInputRef: MutableRefObject<any>;
 }
 
-export default function CollectionSearch({ onSubmit }: CollectionSearchProps) {
+export default function CollectionSearch({
+  onSubmit,
+  searchInputRef,
+}: CollectionSearchProps) {
   const [showSeeResultsLink, setShowSeeResultsLink] = useState(false);
   return (
     <div className="w-full h-full bg-shenron relative">
@@ -34,6 +38,7 @@ export default function CollectionSearch({ onSubmit }: CollectionSearchProps) {
               className="w-full flex flex-row border-8 border-shenron rounded-3xl"
             >
               <input
+                ref={searchInputRef}
                 aria-label="search term"
                 name="collectionSearch"
                 placeholder="Search blogs by title..."
