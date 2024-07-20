@@ -1,12 +1,20 @@
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+"use client";
+
+import {
+  ChevronDownIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/react/24/outline";
+import { useState } from "react";
 
 interface CollectionSearchProps {
   onSubmit: (keywords: string) => void;
 }
 
 export default function CollectionSearch({ onSubmit }: CollectionSearchProps) {
+  const [showSeeResultsLink, setShowSeeResultsLink] = useState(false);
   return (
     <div className="w-full h-full bg-shenron relative">
+      {/* Search Bar */}
       <div className="cowprint-pattern w-full h-full">
         <div className="flex flex-row justify-center items-center py-48 px-12">
           <form
@@ -16,6 +24,7 @@ export default function CollectionSearch({ onSubmit }: CollectionSearchProps) {
                 onSubmit("");
               } else {
                 onSubmit((e.target as any).collectionSearch.value);
+                setShowSeeResultsLink(true);
               }
             }}
             className="w-full max-w-3xl"
@@ -40,6 +49,20 @@ export default function CollectionSearch({ onSubmit }: CollectionSearchProps) {
           </form>
         </div>
       </div>
+
+      {/* See Results button */}
+      {showSeeResultsLink && (
+        <div className="w-full flex flex-row justify-center absolute left-0 bottom-5 animate-fade-in">
+          <a
+            href="#collection-list"
+            onClick={() => setShowSeeResultsLink(false)}
+            className="flex flex-col gap-2 items-center text-superSaiyan hover:text-vegeta"
+          >
+            <span className="text-3xl uppercase font-bold">See Results</span>
+            <ChevronDownIcon className="animate-bob h-auto w-12 stroke-2" />
+          </a>
+        </div>
+      )}
     </div>
   );
 }

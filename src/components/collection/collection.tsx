@@ -15,7 +15,6 @@ export default function Collection({ allBlogsData }: CollectionProps) {
   const [filteredBlogsData, setFilteredblogsData] = useState<BlogData[]>([]);
   const [page, setPage] = useState(0);
   const [numberOfPages, setNumberOfPages] = useState<number>();
-  const [showSeeResultsLink, setShowSeeResultsLink] = useState(false);
 
   const itemsPerPage = 12;
 
@@ -41,10 +40,6 @@ export default function Collection({ allBlogsData }: CollectionProps) {
           .toLowerCase()
           .includes(searchKeywords.toLowerCase());
       });
-
-      if (!!newFilteredBlogsData.length) {
-        setShowSeeResultsLink(true);
-      }
     }
 
     // Get 1 page of items and set it to filteredBlogsData
@@ -57,18 +52,6 @@ export default function Collection({ allBlogsData }: CollectionProps) {
   return (
     <div className="relative">
       <CollectionSearch onSubmit={(keywords) => setSearchKeywords(keywords)} />
-
-      {/* TODO: do this within search? */}
-      {showSeeResultsLink && (
-        <div className="w-full flex flex-row justify-center absolute left-0 bottom-0">
-          <a
-            href="#collection-list"
-            onClick={() => setShowSeeResultsLink(false)}
-          >
-            See Results
-          </a>
-        </div>
-      )}
 
       {!!filteredBlogsData.length && (
         <CollectionList blogsToShow={filteredBlogsData} />

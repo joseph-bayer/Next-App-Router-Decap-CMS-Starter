@@ -6,6 +6,9 @@ interface CollectionListProps {
   blogsToShow: BlogData[];
 }
 
+// TODO: loading state
+// TODO: no results state
+
 export default function CollectionList({ blogsToShow }: CollectionListProps) {
   return (
     <div
