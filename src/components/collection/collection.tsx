@@ -1,18 +1,21 @@
 "use client";
 
-import { BlogData } from "@/interfaces/BlogData";
+import { CollectionItemData } from "../../interfaces/CollectionItemData";
 import CollectionList from "./collection-list";
 import CollectionPager from "./collection-pager";
 import CollectionSearch from "./collection-search";
 import { useEffect, useRef, useState } from "react";
 
 interface CollectionProps {
-  allBlogsData: BlogData[];
+  allCollectionItemsData: CollectionItemData[];
 }
 
-export default function Collection({ allBlogsData }: CollectionProps) {
+export default function Collection({
+  allCollectionItemsData,
+}: CollectionProps) {
   const [searchKeywords, setSearchKeywords] = useState("");
-  const [filteredBlogsData, setFilteredblogsData] = useState<BlogData[]>([]);
+  const [filteredCollectionItemsData, setFilteredcollectionItemsData] =
+    useState<CollectionItemData[]>([]);
   const [page, setPage] = useState(0);
   const [numberOfPages, setNumberOfPages] = useState<number>();
 
@@ -22,33 +25,40 @@ export default function Collection({ allBlogsData }: CollectionProps) {
 
   // Initialize
   useEffect(() => {
-    updateFilteredBlogsData();
+    updateFilteredCollectionItemsData();
 
-    const newNumberOfPages = Math.ceil(allBlogsData.length / itemsPerPage);
+    const newNumberOfPages = Math.ceil(
+      allCollectionItemsData.length / itemsPerPage
+    );
     setNumberOfPages(newNumberOfPages);
-  }, [allBlogsData]);
+  }, [allCollectionItemsData]);
 
   // Handle Search & Page Change
   useEffect(() => {
-    updateFilteredBlogsData();
+    updateFilteredCollectionItemsData();
   }, [searchKeywords, page]);
 
-  const updateFilteredBlogsData = () => {
+  const updateFilteredCollectionItemsData = () => {
     // Apply keyword filter
-    let newFilteredBlogsData = [...allBlogsData];
+    let newFilteredCollectionItemsData = [...allCollectionItemsData];
     if (!!searchKeywords.length) {
-      newFilteredBlogsData = newFilteredBlogsData.filter((blogData) => {
-        return blogData.title
-          .toLowerCase()
-          .includes(searchKeywords.toLowerCase());
-      });
+      newFilteredCollectionItemsData = newFilteredCollectionItemsData.filter(
+        (collectionItemData) => {
+          return collectionItemData.title
+            .toLowerCase()
+            .includes(searchKeywords.toLowerCase());
+        }
+      );
     }
 
-    // Get 1 page of items and set it to filteredBlogsData
+    // Get 1 page of items and set it to filteredCollectionItemsData
     const start = page * itemsPerPage;
     const end = start + itemsPerPage;
-    newFilteredBlogsData = newFilteredBlogsData.slice(start, end);
-    setFilteredblogsData(newFilteredBlogsData);
+    newFilteredCollectionItemsData = newFilteredCollectionItemsData.slice(
+      start,
+      end
+    );
+    setFilteredcollectionItemsData(newFilteredCollectionItemsData);
   };
 
   return (
@@ -59,7 +69,7 @@ export default function Collection({ allBlogsData }: CollectionProps) {
       />
 
       <CollectionList
-        blogsToShow={filteredBlogsData}
+        collectionItemsToShow={filteredCollectionItemsData}
         keywords={searchKeywords}
         searchInputRef={searchInputRef}
       />

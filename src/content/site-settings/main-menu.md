@@ -1,8 +1,8 @@
 ---
 navItems:
   - type: link
-    title: Blogs
-    relativeUrl: /blogs
+    title: Collection
+    relativeUrl: /collection
   - type: dropdown
     title: Demos
     links:

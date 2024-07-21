@@ -16,9 +16,9 @@ collections:
         file: "src/content/landing-pages/home.md"
         fields:
           - { name: "title", label: "Title", widget: "string" }
-  - name: "blog"
-    label: "Blog"
-    folder: src/content/blogs
+  - name: "collection-item"
+    label: "CollectionItem"
+    folder: src/content/collection-items
     create: true
     fields:
       - { label: "Slug", name: "slug", widget: "string" }

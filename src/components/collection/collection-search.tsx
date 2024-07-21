@@ -41,7 +41,7 @@ export default function CollectionSearch({
                 ref={searchInputRef}
                 aria-label="search term"
                 name="collectionSearch"
-                placeholder="Search blogs by title..."
+                placeholder="Search collectionItems by title..."
                 className="py-2 px-4 w-full rounded-l-2xl text-2xl "
               />
               <button
