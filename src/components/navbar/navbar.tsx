@@ -6,7 +6,6 @@ import MainMenuNavItems from "./main-menu-nav-items.tsx/main-menu-nav-items";
 interface NavbarProps {}
 
 export default function Navbar({}: NavbarProps) {
-  // TODO: add link to collectionItem collection page, dropdown for about page/privacy policy
   return (
     <nav className="sticky top-0 z-10 bg-superSaiyan shadow-xl">
       <div className="flex flex-row justify-between items-center px-8 py-2 relative">
