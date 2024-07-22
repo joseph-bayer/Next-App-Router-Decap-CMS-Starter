@@ -32,14 +32,14 @@ export default function CollectionList({
           onClick={() => searchInputRef?.current?.select()}
         >
           <MagnifyingGlassIcon className="h-16 w-16 stroke-2" />
-          <div>
+          <span>
             <span className="block mb-1">
               No Results for "<span className="font-bold">{keywords}</span>".
             </span>
             <span className="block">
               Try searching using different keywords.
             </span>
-          </div>
+          </span>
         </button>
       )}
 

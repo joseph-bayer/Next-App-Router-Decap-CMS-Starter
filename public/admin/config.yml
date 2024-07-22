@@ -60,3 +60,9 @@ collections:
                     fields:
                       - { label: "Title", name: "title" }
                       - { label: "Relative URL", name: "relativeUrl" }
+      - label: "Announcement Banner"
+        name: "announcement-banner"
+        file: "src/content/site-settings/announcement-banner.md"
+        fields:
+          - { label: "Enabled", name: "enabled", widget: boolean }
+          - { label: "Text", name: "text", widget: string }

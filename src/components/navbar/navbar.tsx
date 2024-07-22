@@ -7,7 +7,7 @@ interface NavbarProps {}
 
 export default function Navbar({}: NavbarProps) {
   return (
-    <nav className="sticky top-0 z-10 bg-superSaiyan shadow-xl">
+    <nav className="sticky top-0 z-10 bg-superSaiyan shadow-xl h-[76px]">
       <div className="flex flex-row justify-between items-center px-8 py-2 relative">
         {/* Logo Homepage Link */}
         <div className="flex-1">

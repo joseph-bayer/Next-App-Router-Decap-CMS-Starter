@@ -3,6 +3,7 @@ import "../styles/globals.scss";
 import GlobalContextWrapper from "../context/global-context";
 import { Josefin_Sans, Luckiest_Guy } from "next/font/google";
 import Navbar from "@/components/navbar/navbar";
+import AnnouncementBanner from "@/components/announcement-banner/announcement-banner";
 
 const josefin_sans_font = Josefin_Sans({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body className="min-h-screen">
         <GlobalContextWrapper>
           <Navbar />
+          <AnnouncementBanner />
           {children}
         </GlobalContextWrapper>
       </body>
