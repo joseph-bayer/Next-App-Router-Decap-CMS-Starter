@@ -9,4 +9,5 @@ export interface CollectionItemMatterData {
     src: string;
     alt: string;
   };
+  content: string;
 }
