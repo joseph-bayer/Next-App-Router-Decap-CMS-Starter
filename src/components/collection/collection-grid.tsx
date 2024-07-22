@@ -6,20 +6,20 @@ import Image from "next/image";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { MutableRefObject } from "react";
 
-interface CollectionListProps {
+interface CollectionGridProps {
   collectionItemsToShow: CollectionItemData[];
   keywords: string;
   searchInputRef: MutableRefObject<any>;
 }
 
-export default function CollectionList({
+export default function CollectionGrid({
   collectionItemsToShow,
   keywords,
   searchInputRef,
-}: CollectionListProps) {
+}: CollectionGridProps) {
   return (
     <div
-      id="collection-list"
+      id="collection-grid"
       className="bg-vegeta p-12 h-full relative overflow-hidden min-h-[50vh]"
     >
       {/* BG Overlay */}

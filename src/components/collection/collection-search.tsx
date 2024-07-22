@@ -59,7 +59,7 @@ export default function CollectionSearch({
       {showSeeResultsLink && (
         <div className="w-full flex flex-row justify-center absolute left-0 bottom-5 animate-fade-in">
           <a
-            href="#collection-list"
+            href="#collection-grid"
             onClick={() => setShowSeeResultsLink(false)}
             className="flex flex-col items-center text-superSaiyan hover:text-vegeta"
           >

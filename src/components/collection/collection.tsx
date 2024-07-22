@@ -1,7 +1,7 @@
 "use client";
 
 import { CollectionItemData } from "../../interfaces/CollectionItemData";
-import CollectionList from "./collection-list";
+import CollectionGrid from "./collection-grid";
 import CollectionPager from "./collection-pager";
 import CollectionSearch from "./collection-search";
 import { useEffect, useRef, useState } from "react";
@@ -68,7 +68,7 @@ export default function Collection({
         searchInputRef={searchInputRef}
       />
 
-      <CollectionList
+      <CollectionGrid
         collectionItemsToShow={filteredCollectionItemsData}
         keywords={searchKeywords}
         searchInputRef={searchInputRef}
