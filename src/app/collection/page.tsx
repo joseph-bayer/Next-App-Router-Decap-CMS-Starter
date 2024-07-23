@@ -1,5 +1,5 @@
-import { GetAllCollectionItemsData } from "@/lib/getAllCollectionItemsData";
 import Collection from "@/components/collection/collection";
+import { GetAllCollectionItemsData } from "@/lib/getAllCollectionItemsData";
 
 interface CollectionItemCollectionPageProps {}
 

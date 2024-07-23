@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import MonkeyCowboyImage from "../../assets/images/monkey_cowboy_logo.png";
 import { useState } from "react";
+import MonkeyCowboyImage from "../../assets/images/monkey_cowboy_logo.png";
 
 interface LogoProps {
   spinOnHover: boolean;
@@ -13,7 +13,7 @@ export default function Logo({ spinOnHover }: LogoProps) {
 
   return (
     <div
-      className={`flex flex-row gap-x-1 items-center `}
+      className={`flex flex-row items-center gap-x-1`}
       onMouseOver={() => setIsHovered(true)}
       onAnimationEnd={() => setIsHovered(false)}
     >

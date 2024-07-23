@@ -7,9 +7,9 @@ export default function AnnouncementBanner({}: AnnouncementBannerProps) {
   return (
     <>
       {AlertBannerAttributes.enabled && (
-        <div className="w-full h-[76px] flex flex-row justify-center items-center gap-x-4 bg-red-500">
-          <ExclamationTriangleIcon className="h-12 w-12 text-offWhite stroke-2" />
-          <span className="font-bold text-xl text-offWhite">
+        <div className="flex h-[76px] w-full flex-row items-center justify-center gap-x-4 bg-red-500">
+          <ExclamationTriangleIcon className="h-12 w-12 stroke-2 text-offWhite" />
+          <span className="text-xl font-bold text-offWhite">
             {AlertBannerAttributes.text}
           </span>
         </div>

@@ -1,10 +1,10 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { CollectionItemData } from "../../interfaces/CollectionItemData";
 import CollectionDisplay from "./collection-display";
 import CollectionPager from "./collection-pager";
 import CollectionSearch from "./collection-search";
-import { useEffect, useRef, useState } from "react";
 
 interface CollectionProps {
   allCollectionItemsData: CollectionItemData[];
@@ -28,7 +28,7 @@ export default function Collection({
     updateFilteredCollectionItemsData();
 
     const newNumberOfPages = Math.ceil(
-      allCollectionItemsData.length / itemsPerPage
+      allCollectionItemsData.length / itemsPerPage,
     );
     setNumberOfPages(newNumberOfPages);
   }, [allCollectionItemsData]);
@@ -47,7 +47,7 @@ export default function Collection({
           return collectionItemData.title
             .toLowerCase()
             .includes(searchKeywords.toLowerCase());
-        }
+        },
       );
     }
 
@@ -56,7 +56,7 @@ export default function Collection({
     const end = start + itemsPerPage;
     newFilteredCollectionItemsData = newFilteredCollectionItemsData.slice(
       start,
-      end
+      end,
     );
     setFilteredcollectionItemsData(newFilteredCollectionItemsData);
   };

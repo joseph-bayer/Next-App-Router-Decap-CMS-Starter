@@ -1,17 +1,17 @@
 "use client";
 
 import { NavItem } from "@/interfaces/NavItems";
-import { attributes as MainMenuAttributes } from "../../../content/site-settings/main-menu.md";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import { attributes as MainMenuAttributes } from "../../../content/site-settings/main-menu.md";
 import styles from "./main-menu-nav-items.module.scss";
 
 interface MainMenuNavItemsProps {}
 
 export default function MainMenuNavItems({}: MainMenuNavItemsProps) {
   return (
-    <ul className="font-josefin-sans flex flex-row gap-x-8">
+    <ul className="flex flex-row gap-x-8 font-josefin-sans">
       {MainMenuAttributes.navItems.map((navItem: NavItem, index: number) => {
         switch (navItem.type) {
           case "link":
@@ -19,7 +19,7 @@ export default function MainMenuNavItems({}: MainMenuNavItemsProps) {
               <li key={`${navItem.type}-${index}`}>
                 <Link
                   href={navItem.relativeUrl}
-                  className={`text-2xl lowercase font-bold text-vegeta hover:text-dragonBall ${styles.navLink}`}
+                  className={`text-2xl font-bold lowercase text-vegeta hover:text-dragonBall ${styles.navLink}`}
                 >
                   {navItem.title}
                 </Link>
@@ -29,7 +29,7 @@ export default function MainMenuNavItems({}: MainMenuNavItemsProps) {
             return (
               <li key={`${navItem.type}-${index}`}>
                 <Menu>
-                  <MenuButton className="text-2xl lowercase font-bold text-vegeta hover:text-dragonBall flex flex-row gap-x-1 items-center group">
+                  <MenuButton className="group flex flex-row items-center gap-x-1 text-2xl font-bold lowercase text-vegeta hover:text-dragonBall">
                     {({ active }) => (
                       <>
                         <span>{navItem.title}</span>
@@ -44,7 +44,7 @@ export default function MainMenuNavItems({}: MainMenuNavItemsProps) {
                   </MenuButton>
                   <MenuItems
                     anchor="bottom start"
-                    className="z-[11] bg-superSaiyan flex flex-col rounded-lg border-l border-t border-vegeta"
+                    className="z-[11] flex flex-col rounded-lg border-l border-t border-vegeta bg-superSaiyan"
                   >
                     {navItem.links.map((link, sublinkIndex) => {
                       return (
@@ -53,7 +53,7 @@ export default function MainMenuNavItems({}: MainMenuNavItemsProps) {
                         >
                           <Link
                             href={link.relativeUrl}
-                            className="group text-2xl lowercase font-bold px-8 pt-2 pb-4 text-vegeta hover:text-offWhite data-[focus]:text-offWhite data-[focus]:bg-dragonBall"
+                            className="group px-8 pb-4 pt-2 text-2xl font-bold lowercase text-vegeta hover:text-offWhite data-[focus]:bg-dragonBall data-[focus]:text-offWhite"
                           >
                             <span
                               className={`${styles.navLink} ${styles.dropdownNavLink}`}

@@ -1,14 +1,14 @@
 import Link from "next/link";
-import Logo from "../logo/logo";
 import GithubLogo from "../icons/github-logo";
+import Logo from "../logo/logo";
 import MainMenuNavItems from "./main-menu-nav-items.tsx/main-menu-nav-items";
 
 interface NavbarProps {}
 
 export default function Navbar({}: NavbarProps) {
   return (
-    <nav className="sticky top-0 z-10 bg-superSaiyan shadow-xl h-[76px]">
-      <div className="flex flex-row justify-between items-center px-8 py-2 relative">
+    <nav className="sticky top-0 z-10 h-[76px] bg-superSaiyan shadow-xl">
+      <div className="relative flex flex-row items-center justify-between px-8 py-2">
         {/* Logo Homepage Link */}
         <div className="flex-1">
           <Link href="/" className="block w-fit">
@@ -17,7 +17,7 @@ export default function Navbar({}: NavbarProps) {
         </div>
 
         {/* Links */}
-        <div className="flex-1 flex flex-row justify-center">
+        <div className="flex flex-1 flex-row justify-center">
           <MainMenuNavItems />
         </div>
 

@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import "../styles/globals.scss";
-import GlobalContextWrapper from "../context/global-context";
-import { Josefin_Sans, Luckiest_Guy } from "next/font/google";
-import Navbar from "@/components/navbar/navbar";
 import AnnouncementBanner from "@/components/announcement-banner/announcement-banner";
+import Navbar from "@/components/navbar/navbar";
+import type { Metadata } from "next";
+import { Josefin_Sans, Luckiest_Guy } from "next/font/google";
+import GlobalContextWrapper from "../context/global-context";
+import "../styles/globals.scss";
 
 const josefin_sans_font = Josefin_Sans({
   subsets: ["latin"],

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import MonkeyCowboyImage from "../../assets/images/monkey_cowboy_logo.png";
 import Desert from "../../assets/images/arizona_bg.avif";
+import MonkeyCowboyImage from "../../assets/images/monkey_cowboy_logo.png";
 import styles from "./hero.module.scss";
 
 interface HeroProps {
@@ -9,22 +9,22 @@ interface HeroProps {
 
 export default function Hero({ homepageAttributes }: HeroProps) {
   return (
-    <section className="flex flex-col items-center gap-4 relative w-full">
-      <div className="relative w-full h-full px-16 py-48">
+    <section className="relative flex w-full flex-col items-center gap-4">
+      <div className="relative h-full w-full px-16 py-48">
         {/* BG Image */}
         <Image
           src={Desert}
           alt="Image of the desert at night"
           fill
           placeholder="blur"
-          className="absolute top-0 left-0"
+          className="absolute left-0 top-0"
           style={{
             objectFit: "cover",
             objectPosition: "center 80%",
           }}
         />
 
-        <div className="flex flex-row gap-x-8 relative justify-center">
+        <div className="relative flex flex-row justify-center gap-x-8">
           {/* Cowboy Monkey */}
           <div className="relative">
             <Image
@@ -36,7 +36,7 @@ export default function Hero({ homepageAttributes }: HeroProps) {
               className="animate-bob relative"
             />
             <div
-              className={`animate-widen-narrow absolute bottom-[-60px] left-0 right-0 w-[50%] h-[50px] rounded-[50%] mx-auto ${styles.floatingHeadShadow}`}
+              className={`animate-widen-narrow absolute bottom-[-60px] left-0 right-0 mx-auto h-[50px] w-[50%] rounded-[50%] ${styles.floatingHeadShadow}`}
             ></div>
           </div>
 

@@ -1,6 +1,6 @@
 import { CollectionItemData } from "@/interfaces/CollectionItemData";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 interface CollectionListProps {
   collectionItemsToShow: CollectionItemData[];
@@ -10,7 +10,7 @@ export default function CollectionList({
   collectionItemsToShow,
 }: CollectionListProps) {
   return (
-    <div className="flex flex-col gap-16 justify-center z-[2] relative">
+    <div className="relative z-[2] flex flex-col justify-center gap-16">
       {/* TODO: Sort by date asc/desc */}
       <div>
         <button></button>
@@ -20,7 +20,7 @@ export default function CollectionList({
           return (
             <Link
               href={`/collection/${collectionItem.slug}`}
-              className="animate-fade-in fade-in-2s mx-auto md:mx-[unset] hover:scale-[1.01] transition-all duration-300 ease-in-out flex flex-row gap-8 border-b-4 border-dragonBall w-full p-8 rounded-xl bg-offWhite/25 hover:bg-offWhite/50 max-h-[400px]"
+              className="animate-fade-in fade-in-2s mx-auto flex max-h-[400px] w-full flex-row gap-8 rounded-xl border-b-4 border-dragonBall bg-offWhite/25 p-8 transition-all duration-300 ease-in-out hover:scale-[1.01] hover:bg-offWhite/50 md:mx-[unset]"
               key={`${collectionItem.slug}-${index}`}
             >
               <Image
@@ -40,7 +40,7 @@ export default function CollectionList({
                 <div className="text-2xl font-black text-superSaiyan">
                   {collectionItem.title}
                 </div>
-                <div className="text-xl text-offBlack text-ellipsis line-clamp-[9] whitespace-pre-wrap break-words">
+                <div className="line-clamp-[9] text-ellipsis whitespace-pre-wrap break-words text-xl text-offBlack">
                   {collectionItem.content}
                 </div>
               </div>

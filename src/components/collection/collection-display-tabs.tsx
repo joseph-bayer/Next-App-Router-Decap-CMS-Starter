@@ -10,14 +10,14 @@ export default function CollectionDisplayTabs({
   tabPanelComponents,
 }: CollectionDisplayTabsProps) {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="mx-auto max-w-7xl">
       <TabGroup>
-        <TabList className="flex flex-row justify-end items-center gap-4">
+        <TabList className="flex flex-row items-center justify-end gap-4">
           {tabTitles.map((tabTitle, index) => {
             return (
               <Tab
                 key={`tab-title-${tabTitle}-${index}`}
-                className="z-[2] rounded-full py-1 px-3 text-lg/6 font-semibold text-superSaiyan focus:outline-none data-[selected]:bg-dragonBall/20 data-[hover]:bg-dragonBall/10 data-[selected]:data-[hover]:bg-dragonBall/20 data-[focus]:outline-1 data-[focus]:outline-dragonBall"
+                className="z-[2] rounded-full px-3 py-1 text-lg/6 font-semibold text-superSaiyan focus:outline-none data-[hover]:bg-dragonBall/10 data-[selected]:bg-dragonBall/20 data-[selected]:data-[hover]:bg-dragonBall/20 data-[focus]:outline-1 data-[focus]:outline-dragonBall"
               >
                 {tabTitle}
               </Tab>

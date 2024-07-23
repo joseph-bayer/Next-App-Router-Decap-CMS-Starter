@@ -13,7 +13,7 @@ export default async function CollectionItemPage({
   params,
 }: CollectionItemPageProps) {
   const collectionItemData = await GetCollectionItemData(
-    params.collectionItemSlug
+    params.collectionItemSlug,
   );
 
   return (
@@ -27,14 +27,14 @@ export default async function CollectionItemPage({
 export async function generateStaticParams() {
   // Get files in the "collectionItems" folder
   const filesInCollectionItemsFolder = fs.readdirSync(
-    "src/content/collection-items"
+    "src/content/collection-items",
   );
 
   // Get the slug for each collectionItem
   const collectionItemSlugs = filesInCollectionItemsFolder.map((filename) => {
     const file = fs.readFileSync(
       `src/content/collection-items/${filename}`,
-      "utf8"
+      "utf8",
     );
     const matterData = matter(file);
     return matterData.data.slug;

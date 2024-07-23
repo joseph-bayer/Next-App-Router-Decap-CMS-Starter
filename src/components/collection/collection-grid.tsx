@@ -1,6 +1,6 @@
 import { CollectionItemData } from "@/interfaces/CollectionItemData";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 interface CollectionGridProps {
   collectionItemsToShow: CollectionItemData[];
@@ -12,17 +12,17 @@ export default function CollectionGrid({
   return (
     <>
       {!!collectionItemsToShow.length && (
-        <div className="flex flex-col gap-16 justify-center z-[2] relative">
+        <div className="relative z-[2] flex flex-col justify-center gap-16">
           {/* TODO: Sort by date asc/desc */}
           <div>
             <button></button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 justify-items-center">
+          <div className="grid grid-cols-1 justify-items-center gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
             {collectionItemsToShow.map((collectionItem, index) => {
               return (
                 <Link
                   href={`/collection/${collectionItem.slug}`}
-                  className="animate-fade-in fade-in-2s max-w-[300px] mx-auto md:mx-[unset] hover:scale-110 transition-transform duration-300 ease-in-out"
+                  className="animate-fade-in fade-in-2s mx-auto max-w-[300px] transition-transform duration-300 ease-in-out hover:scale-110 md:mx-[unset]"
                   key={`${collectionItem.slug}-${index}`}
                 >
                   <Image

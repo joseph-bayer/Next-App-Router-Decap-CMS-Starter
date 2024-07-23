@@ -10,7 +10,7 @@ export async function GetAllCollectionItemsData(): Promise<
 > {
   // get files in the "collectionItems" folder
   const filesInCollectionItemsFolder = fs.readdirSync(
-    "src/content/collection-items"
+    "src/content/collection-items",
   );
 
   // map files into object data
@@ -19,11 +19,11 @@ export async function GetAllCollectionItemsData(): Promise<
       .map((filename) => {
         const file = fs.readFileSync(
           `src/content/collection-items/${filename}`,
-          "utf8"
+          "utf8",
         );
         const matterData = matter(file);
         const fileStats = fs.statSync(
-          `src/content/collection-items/${filename}`
+          `src/content/collection-items/${filename}`,
         );
         const collectionItemData: CollectionItemData = {
           ...(matterData.data as CollectionItemMatterData),
