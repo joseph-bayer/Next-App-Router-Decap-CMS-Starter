@@ -9,7 +9,7 @@
     "start": "next start",
     "analyze": "cross-env ANALYZE=true npm run build",
     "lint": "next lint",
-    "format": "cd src && prettier --write \"**/*.{ts,html,scss}\" && cd .."
+    "format": "cd src && prettier --write \"**/*.{tsx,ts,html,scss}\" && cd .."
   },
   "dependencies": {
     "@headlessui/react": "^2.1.1",
