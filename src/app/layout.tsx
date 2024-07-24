@@ -1,4 +1,5 @@
 import AnnouncementBanner from "@/components/announcement-banner/announcement-banner";
+import BypassBlock from "@/components/bypass-block/bypass-block";
 import Navbar from "@/components/navbar/navbar";
 import type { Metadata } from "next";
 import { Josefin_Sans, Luckiest_Guy } from "next/font/google";
@@ -35,9 +36,12 @@ export default function RootLayout({
     >
       <body className="min-h-screen">
         <GlobalContextWrapper>
+          <BypassBlock />
           <Navbar />
           <AnnouncementBanner />
-          {children}
+          <div id="main-content" tabIndex={-1}>
+            {children}
+          </div>
         </GlobalContextWrapper>
       </body>
     </html>
