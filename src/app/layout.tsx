@@ -1,5 +1,6 @@
 import AnnouncementBanner from "@/components/announcement-banner/announcement-banner";
 import BypassBlock from "@/components/bypass-block/bypass-block";
+import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import type { Metadata } from "next";
 import { Josefin_Sans, Luckiest_Guy } from "next/font/google";
@@ -42,6 +43,7 @@ export default function RootLayout({
           <div id="main-content" tabIndex={-1}>
             {children}
           </div>
+          <Footer />
         </GlobalContextWrapper>
       </body>
     </html>
