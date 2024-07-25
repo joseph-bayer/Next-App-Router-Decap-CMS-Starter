@@ -2,6 +2,7 @@ import DebugHelper from "@/components/debug-helper/debug-helper";
 import { GetCollectionItemData } from "@/lib/getCollectionItemData";
 import fs from "fs";
 import matter from "gray-matter";
+import ReactMarkdown from "react-markdown";
 
 interface CollectionItemPageProps {
   params: {
@@ -20,6 +21,7 @@ export default async function CollectionItemPage({
     <main className="flex min-h-screen flex-col items-center p-24">
       TODO: CollectionItem Page
       <DebugHelper data={collectionItemData} />
+      <ReactMarkdown>{collectionItemData?.content}</ReactMarkdown>
     </main>
   );
 }
