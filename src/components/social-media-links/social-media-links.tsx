@@ -64,12 +64,12 @@ const social = [
 
 export default function SocialMediaLinks() {
   return (
-    <div className="flex w-full flex-row justify-center gap-8">
+    <div className="flex flex-row gap-8">
       {social.map((item) => (
         <a
           key={item.name}
           href={item.href}
-          className="text-dragonBall hover:text-vegeta"
+          className="text-charcoal transition-colors duration-300 ease-in-out hover:text-dragonBall"
         >
           <span className="sr-only">{item.name}</span>
           <item.icon aria-hidden="true" className="h-8 w-8" />

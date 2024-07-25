@@ -27,7 +27,7 @@ export default function Navbar({}: NavbarProps) {
             <GithubLogo
               width={60}
               height={60}
-              className="fill-[#24292f] hover:fill-dragonBall"
+              className="fill-charcoal hover:fill-dragonBall"
             />
             <span className="sr-only">Link to Github for this project</span>
           </a>

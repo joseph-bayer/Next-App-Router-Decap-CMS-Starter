@@ -15,6 +15,7 @@ const config: Config = {
         shenron: "#4DA167",
         trunks: "#5D2E8C",
         coffee: "#702911",
+        charcoal: "#24292f",
         offBlack: "#01080a",
         offWhite: "#e7e5e8",
       },

@@ -13,7 +13,7 @@ export function Copyright({}: CopyrightProps) {
   }, []);
 
   return (
-    <div className="flex w-full flex-row justify-end bg-vegeta px-4 py-2 text-offWhite">
+    <div className="bg-charcoal flex w-full flex-row justify-end px-4 py-2 text-offWhite">
       &copy; Copyright {currentYear}, Example Corporation
     </div>
   );
