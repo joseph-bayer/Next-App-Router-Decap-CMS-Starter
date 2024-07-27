@@ -1,8 +1,8 @@
 "use client";
 
+import Markdown from "markdown-to-jsx";
 import dynamic from "next/dynamic";
 import { useState } from "react";
-import ReactMarkdown from "react-markdown";
 import DebugHelper from "../debug-helper/debug-helper";
 const Modal = dynamic(() => import("../modal/modal"));
 
@@ -38,7 +38,7 @@ export default function CollectionContent({
           </button>
         </div>
 
-        <ReactMarkdown>{collectionItemData?.content}</ReactMarkdown>
+        <Markdown>{collectionItemData?.content}</Markdown>
       </div>
     </div>
   );
