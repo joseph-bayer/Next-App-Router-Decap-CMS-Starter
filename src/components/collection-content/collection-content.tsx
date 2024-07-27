@@ -1,9 +1,10 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import DebugHelper from "../debug-helper/debug-helper";
-import Modal from "../modal/modal";
+const Modal = dynamic(() => import("../modal/modal"));
 
 interface CollectionContentProps {
   collectionItemData: any; // TODO:
@@ -16,12 +17,14 @@ export default function CollectionContent({
 
   return (
     <div>
-      <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
-        <div className="flex flex-col gap-4">
-          <span>JSON Data for this collection item:</span>
-          <DebugHelper data={collectionItemData} />
-        </div>
-      </Modal>
+      {!!isModalOpen && (
+        <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
+          <div className="flex flex-col gap-4">
+            <span>JSON Data for this collection item:</span>
+            <DebugHelper data={collectionItemData} />
+          </div>
+        </Modal>
+      )}
 
       <div className="flex flex-col gap-8">
         {/* Modal Example */}
