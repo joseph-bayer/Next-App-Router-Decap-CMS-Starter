@@ -28,6 +28,7 @@ export default function CollectionList({
                 alt={collectionItem.heroImage.alt}
                 width={300}
                 height={300}
+                className="rounded-t-2xl"
                 style={{
                   objectFit: "cover",
                   minHeight: "300px",
