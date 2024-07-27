@@ -1,8 +1,17 @@
 import { RemoteVideoPlatformEnum } from "@/interfaces/VideoPlayerData";
 import BuildVideoPlayerDataFromSrc from "@/lib/buildVideoPlayerDataFromSrc";
-import { YouTubeEmbed } from "@next/third-parties/google";
+import dynamic from "next/dynamic";
 import "server-only";
-import VimeoPlayer from "./vimeo-player";
+import VideoPlayerSuspenseSkeleton from "./video-player-suspense-skeleton";
+const YouTubeEmbed = dynamic(
+  () => import("@next/third-parties/google").then((d) => d.YouTubeEmbed),
+  {
+    loading: () => <VideoPlayerSuspenseSkeleton />,
+  },
+);
+const VimeoPlayer = dynamic(() => import("./vimeo-player"), {
+  loading: () => <VideoPlayerSuspenseSkeleton />,
+});
 
 interface RemoteVideoPlayerProps {
   src: string;
