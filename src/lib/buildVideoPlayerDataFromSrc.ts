@@ -17,10 +17,9 @@ export default async function BuildVideoPlayerDataFromSrc(
   } else if (src.toLowerCase().includes("vimeo.com")) {
     videoPlayerProps.platform = RemoteVideoPlatformEnum.VIMEO;
     videoPlayerProps.id = getVimeoVideoId(src);
-    videoPlayerProps.embedSrc = src.replace(
-      "vimeo.com",
-      "player.vimeo.com/video",
-    );
+    videoPlayerProps.embedSrc =
+      src.replace("vimeo.com", "player.vimeo.com/video") + "?autoplay=1";
+
     const videoDataResponse = await fetch(
       `https://vimeo.com/api/v2/video/${videoPlayerProps.id}.json`,
     ).then((r) => r.json());
