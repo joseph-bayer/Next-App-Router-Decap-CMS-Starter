@@ -7,11 +7,13 @@ navItems:
     title: Demos
     links:
       - title: SwiperJS
-        relativeUrl: /slider-demo
+        relativeUrl: /demos/slider-demo
       - title: Drag and Drop
-        relativeUrl: /drag-and-drop-demo
+        relativeUrl: /demos/drag-and-drop-demo
       - title: GSAP
-        relativeUrl: /gsap-demo
+        relativeUrl: /demos/gsap-demo
+      - title: Video Players
+        relativeUrl: /demos/video-players
   - type: dropdown
     links:
       - title: About

@@ -5,6 +5,7 @@ import MainMenuNavItems from "./main-menu-nav-items.tsx/main-menu-nav-items";
 
 interface NavbarProps {}
 
+// TODO: make mobile friendly
 export default function Navbar({}: NavbarProps) {
   return (
     <nav className="sticky top-0 z-10 h-[76px] bg-superSaiyan shadow-xl">
