@@ -14,7 +14,7 @@ export default function Collection({
   allCollectionItemsData,
 }: CollectionProps) {
   const [searchKeywords, setSearchKeywords] = useState("");
-  const [filteredCollectionItemsData, setFilteredcollectionItemsData] =
+  const [filteredCollectionItemsData, setFilteredCollectionItemsData] =
     useState<CollectionItemData[]>([]);
   const [page, setPage] = useState(0);
   const [numberOfPages, setNumberOfPages] = useState<number>();
@@ -58,7 +58,7 @@ export default function Collection({
       start,
       end,
     );
-    setFilteredcollectionItemsData(newFilteredCollectionItemsData);
+    setFilteredCollectionItemsData(newFilteredCollectionItemsData);
   };
 
   return (
