@@ -1,5 +1,7 @@
 "use client";
 
+// TODO: make dev-only route
+// TODO: look into manual initialization
 export default function Admin() {
   return (
     <html

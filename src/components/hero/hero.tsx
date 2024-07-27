@@ -15,6 +15,7 @@ export default function Hero({ homepageAttributes }: HeroProps) {
         <Image
           src={Desert}
           alt="Image of the desert at night"
+          priority
           fill
           placeholder="blur"
           className="absolute left-0 top-0"
