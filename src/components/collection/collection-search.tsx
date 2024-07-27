@@ -17,7 +17,7 @@ export default function CollectionSearch({
 }: CollectionSearchProps) {
   const [showSeeResultsLink, setShowSeeResultsLink] = useState(false);
   return (
-    <div className="relative h-full w-full bg-shenron">
+    <div className="relative h-full w-full bg-offWhite">
       {/* Search Bar */}
       <div className="cowprint-pattern h-full w-full">
         <div className="flex flex-row items-center justify-center px-12 py-48">
@@ -35,14 +35,14 @@ export default function CollectionSearch({
           >
             <div
               role="search"
-              className="flex w-full flex-row rounded-3xl border-8 border-shenron"
+              className="flex w-full flex-row rounded-3xl bg-offWhite p-2"
             >
               <input
                 ref={searchInputRef}
                 aria-label="search term"
                 name="collectionSearch"
                 placeholder="Search collectionItems by title..."
-                className="w-full rounded-l-2xl px-4 py-2 text-2xl"
+                className="w-full rounded-l-2xl px-4 py-2 text-2xl placeholder:text-gray-500"
               />
               <button
                 aria-label="search"

@@ -20,7 +20,7 @@ export default function CollectionList({
           return (
             <Link
               href={`/collection/${collectionItem.slug}`}
-              className="animate-fade-in fade-in-2s mx-auto flex max-h-[400px] w-full flex-row gap-8 rounded-xl border-b-4 border-dragonBall bg-offWhite/25 p-8 transition-all duration-300 ease-in-out hover:scale-[1.01] hover:bg-offWhite/50 md:mx-[unset]"
+              className="animate-fade-in fade-in-2s mx-auto flex max-h-[400px] w-full flex-row gap-8 rounded-t-2xl border-b-4 border-dragonBall bg-offWhite/25 p-8 transition-all duration-300 ease-in-out hover:scale-[1.01] hover:bg-offWhite/50 md:mx-[unset]"
               key={`${collectionItem.slug}-${index}`}
             >
               <Image

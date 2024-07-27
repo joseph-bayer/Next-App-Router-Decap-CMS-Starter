@@ -12,12 +12,12 @@ export default function CollectionDisplayTabs({
   return (
     <div className="mx-auto max-w-7xl">
       <TabGroup>
-        <TabList className="flex flex-row items-center justify-end gap-4">
+        <TabList className="flex flex-row items-center justify-center gap-x-1">
           {tabTitles.map((tabTitle, index) => {
             return (
               <Tab
                 key={`tab-title-${tabTitle}-${index}`}
-                className="z-[2] rounded-full px-3 py-1 text-lg/6 font-semibold text-superSaiyan focus:outline-none data-[hover]:bg-dragonBall/10 data-[selected]:bg-dragonBall/20 data-[selected]:data-[hover]:bg-dragonBall/20 data-[focus]:outline-1 data-[focus]:outline-dragonBall"
+                className={`z-[2] flex w-[300px] items-center justify-center bg-white px-3 py-1 text-xl font-semibold text-dragonBall transition-colors duration-300 ease-in-out focus:outline-none data-[hover]:bg-dragonBall data-[selected]:bg-dragonBall data-[hover]:text-white data-[selected]:text-white data-[focus]:outline-1 data-[focus]:outline-superSaiyan ${index === 0 && "rounded-l-xl"} ${index === tabTitles.length - 1 && "rounded-r-xl"}`}
               >
                 {tabTitle}
               </Tab>

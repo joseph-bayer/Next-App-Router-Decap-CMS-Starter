@@ -30,6 +30,7 @@ export default function CollectionGrid({
                     alt={collectionItem.heroImage.alt}
                     width={300}
                     height={300}
+                    className="rounded-2xl"
                     style={{
                       objectFit: "cover",
                       minHeight: "300px",
