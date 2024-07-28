@@ -18,7 +18,7 @@ export default function Logo({ spinOnHover }: LogoProps) {
       onAnimationEnd={() => setIsHovered(false)}
     >
       <span
-        className="font-indie-flower text-3xl text-dragonBall lg:text-6xl"
+        className="font-indie-flower text-4xl text-dragonBall lg:text-6xl"
         aria-hidden="true"
       >
         H
@@ -26,7 +26,7 @@ export default function Logo({ spinOnHover }: LogoProps) {
       <Image
         src={MonkeyCowboyImage}
         alt="Monkey Cowboy Logo"
-        className={`"w-[30px] h-[30px] max-w-[30px] lg:h-[60px] lg:w-[60px] lg:max-w-[60px] ${spinOnHover && isHovered ? "animate-wind-up-spin" : ""}`}
+        className={`"w-[40px] h-[40px] max-w-[40px] lg:h-[60px] lg:w-[60px] lg:max-w-[60px] ${spinOnHover && isHovered ? "animate-wind-up-spin" : ""}`}
         placeholder="blur"
         style={{
           objectFit: "contain",
@@ -34,7 +34,7 @@ export default function Logo({ spinOnHover }: LogoProps) {
         aria-hidden={true}
       />
       <span
-        className="font-indie-flower text-3xl text-dragonBall lg:text-6xl"
+        className="font-indie-flower text-4xl text-dragonBall lg:text-6xl"
         aria-hidden={true}
       >
         wdy!
