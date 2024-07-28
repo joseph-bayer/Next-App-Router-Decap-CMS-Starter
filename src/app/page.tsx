@@ -29,7 +29,7 @@ export default function Home() {
                 objectFit: "contain",
               }}
               quality={50}
-              sizes="(max-width: 400px) 95vw, (max-width: 800px) 50, 33vw"
+              sizes="(max-width: 400px) 95vw, (max-width: 800px) 50vw, 33vw"
             />
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function Home() {
               objectFit: "contain",
             }}
             quality={50}
-            sizes="(max-width: 400px) 95vw, (max-width: 800px) 50, 33vw"
+            sizes="(max-width: 400px) 95vw, (max-width: 800px) 50vw, 33vw"
           />
           <div>
             <h2 className="font-josefin-sans text-6xl font-bold text-superSaiyan">
