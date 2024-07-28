@@ -23,6 +23,7 @@ export default function Hero({ homepageAttributes }: HeroProps) {
             objectFit: "cover",
             objectPosition: "center 80%",
           }}
+          sizes="100vw"
         />
 
         <div className="relative flex flex-row justify-center gap-x-8">
