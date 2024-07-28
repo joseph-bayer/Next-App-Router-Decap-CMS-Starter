@@ -16,14 +16,12 @@ export default function Hero({ homepageAttributes }: HeroProps) {
           src={Desert}
           alt="Image of the desert at night"
           priority
-          width={1920}
-          height={500}
+          fill
           placeholder="blur"
           className="absolute left-0 top-0"
           style={{
             objectFit: "cover",
             objectPosition: "center 80%",
-            maxHeight: "500px",
           }}
           quality={20}
           sizes="100vw"
