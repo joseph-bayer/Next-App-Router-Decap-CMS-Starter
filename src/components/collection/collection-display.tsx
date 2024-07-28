@@ -42,7 +42,7 @@ export default function CollectionDisplay({
         </button>
       )}
 
-      {!!collectionItemsToShow && (
+      {!!collectionItemsToShow.length && (
         <CollectionDisplayTabs
           tabTitles={["Grid", "List"]}
           tabPanelComponents={[

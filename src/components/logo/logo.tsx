@@ -13,12 +13,12 @@ export default function Logo({ spinOnHover }: LogoProps) {
 
   return (
     <div
-      className={`flex flex-row items-center gap-x-1`}
+      className={`flex flex-row items-center gap-x-0.5 lg:gap-x-1`}
       onMouseOver={() => setIsHovered(true)}
       onAnimationEnd={() => setIsHovered(false)}
     >
       <span
-        className="font-indie-flower text-6xl text-dragonBall"
+        className="font-indie-flower text-3xl text-dragonBall lg:text-6xl"
         aria-hidden="true"
       >
         H
@@ -26,9 +26,7 @@ export default function Logo({ spinOnHover }: LogoProps) {
       <Image
         src={MonkeyCowboyImage}
         alt="Monkey Cowboy Logo"
-        className={`${spinOnHover && isHovered ? "animate-wind-up-spin" : ""}`}
-        height={60}
-        width={60}
+        className={`"w-[30px] h-[30px] max-w-[30px] lg:h-[60px] lg:w-[60px] lg:max-w-[60px] ${spinOnHover && isHovered ? "animate-wind-up-spin" : ""}`}
         placeholder="blur"
         style={{
           objectFit: "contain",
@@ -36,7 +34,7 @@ export default function Logo({ spinOnHover }: LogoProps) {
         aria-hidden={true}
       />
       <span
-        className="font-indie-flower text-6xl text-dragonBall"
+        className="font-indie-flower text-3xl text-dragonBall lg:text-6xl"
         aria-hidden={true}
       >
         wdy!

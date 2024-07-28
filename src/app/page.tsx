@@ -12,7 +12,7 @@ export default function Home() {
 
       <section className="w-full bg-coffee">
         <div className="topography-pattern h-full w-full bg-fixed">
-          <div className="mx-auto flex max-w-5xl flex-row justify-between py-32">
+          <div className="mx-auto flex max-w-5xl flex-col justify-between gap-2 px-4 py-32 lg:flex-row">
             <div>
               <h2 className="font-josefin-sans text-6xl font-bold text-superSaiyan">
                 Main Technology
@@ -38,7 +38,7 @@ export default function Home() {
         <div className="cactus-highlight-2 absolute left-[50%] top-[50px] h-full w-full bg-cover bg-top"></div>
 
         {/* Content */}
-        <div className="relative z-[1] mx-auto flex max-w-5xl flex-row justify-between py-32">
+        <div className="relative z-[1] mx-auto flex max-w-5xl flex-col justify-between gap-2 px-4 py-32 lg:flex-row">
           <Image
             src={ChickenCowboyImage}
             alt="Image of chicken cowboy"

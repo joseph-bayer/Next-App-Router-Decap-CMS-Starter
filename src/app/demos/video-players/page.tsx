@@ -4,7 +4,7 @@ interface VideoPlayerDemosPageProps {}
 
 export default function VideoPlayerDemoPage({}: VideoPlayerDemosPageProps) {
   return (
-    <main className="topography-pattern flex min-h-screen flex-col items-center gap-12 bg-coffee p-24 text-white">
+    <main className="topography-pattern flex min-h-screen flex-col items-center gap-12 bg-coffee px-4 py-24 text-white lg:p-24">
       <h1 className="font-josefin-sans text-6xl font-black">
         Video Player Demos
       </h1>
