@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Desert from "../../assets/images/arizona_bg.avif";
+import Desert from "../../assets/images/arizona_bg.jpg";
 import MonkeyCowboyImage from "../../assets/images/monkey_cowboy_logo.png";
 import styles from "./hero.module.scss";
 
@@ -23,7 +23,7 @@ export default function Hero({ homepageAttributes }: HeroProps) {
             objectFit: "cover",
             objectPosition: "center 80%",
           }}
-          quality={1}
+          quality={20}
           sizes="100vw"
         />
 
