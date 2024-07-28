@@ -28,6 +28,7 @@ export default function Home() {
               style={{
                 objectFit: "contain",
               }}
+              sizes="(max-width: 400px) 95vw, (max-width: 800px) 75vw, 50vw"
             />
           </div>
         </div>
@@ -45,10 +46,10 @@ export default function Home() {
             height={400}
             width={400}
             placeholder="blur"
-            className="scale-x-[-1]"
             style={{
               objectFit: "contain",
             }}
+            sizes="(max-width: 400px) 95vw, (max-width: 800px) 75vw, 50vw"
           />
           <div>
             <h2 className="font-josefin-sans text-6xl font-bold text-superSaiyan">
