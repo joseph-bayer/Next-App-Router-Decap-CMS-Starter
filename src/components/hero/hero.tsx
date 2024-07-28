@@ -16,7 +16,8 @@ export default function Hero({ homepageAttributes }: HeroProps) {
           src={Desert}
           alt="Image of the desert at night"
           priority
-          fill
+          width={1920}
+          height={500}
           placeholder="blur"
           className="absolute left-0 top-0"
           style={{
