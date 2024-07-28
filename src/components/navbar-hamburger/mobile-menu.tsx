@@ -42,7 +42,11 @@ export default function MobileMenu({
                 </Link>
               )}
               {navItem.type === "dropdown" && (
-                <Disclosure as="div" className="-mx-3">
+                <Disclosure
+                  as="div"
+                  className="-mx-3"
+                  key={`mobile-${navItem.title}`}
+                >
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg pl-3 pr-3.5 text-2xl font-bold lowercase text-white hover:text-superSaiyan">
                     {navItem.title}
                     <ChevronDownIcon
