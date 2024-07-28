@@ -28,7 +28,7 @@ export default function Home() {
               style={{
                 objectFit: "contain",
               }}
-              quality={75}
+              quality={50}
               sizes="(max-width: 400px) 95vw, (max-width: 800px) 50, 33vw"
             />
           </div>
@@ -51,7 +51,7 @@ export default function Home() {
             style={{
               objectFit: "contain",
             }}
-            quality={75}
+            quality={50}
             sizes="(max-width: 400px) 95vw, (max-width: 800px) 50, 33vw"
           />
           <div>

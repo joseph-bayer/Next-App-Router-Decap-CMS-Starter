@@ -23,7 +23,7 @@ export default function Hero({ homepageAttributes }: HeroProps) {
             objectFit: "cover",
             objectPosition: "center 80%",
           }}
-          quality={75}
+          quality={1}
           sizes="100vw"
         />
 
