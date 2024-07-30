@@ -23,6 +23,8 @@ export default async function CollectionItemPage({
   );
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   // Get files in the "collectionItems" folder
   const filesInCollectionItemsFolder = fs.readdirSync(
@@ -36,7 +38,9 @@ export async function generateStaticParams() {
       "utf8",
     );
     const matterData = matter(file);
-    return matterData.data.slug;
+    return {
+      collectionItemSlug: `${(matterData.data.slug as string).startsWith("/") ? matterData.data.slug.substring(1) : matterData.data.slug}`,
+    };
   });
 
   return collectionItemSlugs;

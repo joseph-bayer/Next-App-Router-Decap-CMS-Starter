@@ -4,7 +4,10 @@ export async function GetCollectionItemData(collectionItemSlug: string) {
   const allCollectionItemsData = await GetAllCollectionItemsData();
 
   const collectionItemData = allCollectionItemsData.find((data) => {
-    return data.slug === collectionItemSlug;
+    const slugToCheck = (data.slug as string).startsWith("/")
+      ? data.slug.substring(1)
+      : data.slug;
+    return slugToCheck === collectionItemSlug;
   });
 
   return collectionItemData;
