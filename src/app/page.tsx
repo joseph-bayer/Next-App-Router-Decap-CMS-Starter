@@ -1,9 +1,14 @@
 import DebugHelper from "@/components/debug-helper/debug-helper";
 import Hero from "@/components/hero/hero";
+import { Metadata } from "next";
 import Image from "next/image";
 import ChickenCowboyImage from "../assets/images/chicken_cowboy.png";
 import WolfCactusImage from "../assets/images/wolf_by_cactus.png";
 import { attributes as HomepageAttributes } from "../content/landing-pages/home.md";
+
+export const metadata: Metadata = {
+  title: "Next.js (App Router) + Decap CMS Template",
+};
 
 export default function Home() {
   return (

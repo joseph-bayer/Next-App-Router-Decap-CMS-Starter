@@ -2,7 +2,6 @@ import AnnouncementBanner from "@/components/announcement-banner/announcement-ba
 import BypassBlock from "@/components/bypass-block/bypass-block";
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
-import type { Metadata } from "next";
 import { Josefin_Sans, Luckiest_Guy } from "next/font/google";
 import GlobalContextWrapper from "../context/global-context";
 import "../styles/globals.scss";
@@ -19,11 +18,6 @@ const indie_flower_font = Luckiest_Guy({
   variable: "--font-indie-flower",
   weight: ["400"],
 });
-
-export const metadata: Metadata = {
-  title: "Next.js (App Router) + Decap CMS Template",
-  description: "A template for Next.js + Decap CMS",
-};
 
 export default function RootLayout({
   children,
