@@ -1,5 +1,5 @@
 ---
-slug: the-wild-world-of-monkey-cowboy
+slug: /the-wild-world-of-monkey-cowboy
 heroImage:
   src: https://upload.wikimedia.org/wikipedia/commons/9/91/H%C3%BCrmet%C3%A7i_Sazl%C4%B1%C4%9F%C4%B1ndaki_y%C4%B1lk%C4%B1_atlar%C4%B1.jpg
   alt: Image of a silhouetted man wearing a cowboy hat and riding a horse

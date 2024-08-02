@@ -21,7 +21,12 @@ collections:
     folder: src/content/collection-items
     create: true
     fields:
-      - { label: "Slug", name: "slug", widget: "string" }
+      - {
+          label: "Slug",
+          name: "slug",
+          widget: "string",
+          pattern: ['^(\/).*', "Must start with '/'"],
+        }
       - label: "Hero Image"
         name: "heroImage"
         widget: "object"
