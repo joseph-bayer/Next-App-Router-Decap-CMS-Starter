@@ -1,7 +1,9 @@
 import CollectionContent from "@/components/collection-content/collection-content";
+import { CollectionItemMatterData } from "@/interfaces/CollectionItemData";
 import { GetCollectionItemData } from "@/lib/getCollectionItemData";
 import fs from "fs";
 import matter from "gray-matter";
+import { Metadata, ResolvingMetadata } from "next";
 
 interface CollectionItemPageProps {
   params: {
@@ -44,4 +46,35 @@ export async function generateStaticParams() {
   });
 
   return collectionItemSlugs;
+}
+
+export async function generateMetadata(
+  { params }: any,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const { collectionItemSlug } = params;
+
+  // Get files in the "collectionItems" folder
+  const filesInCollectionItemsFolder = fs.readdirSync(
+    "src/content/collection-items",
+  );
+
+  // Get the slug for each collectionItem
+  const collectionItemData: CollectionItemMatterData | undefined =
+    filesInCollectionItemsFolder
+      .map((filename) => {
+        const file = fs.readFileSync(
+          `src/content/collection-items/${filename}`,
+          "utf8",
+        );
+        const matterData = matter(file);
+        return matterData.data as CollectionItemMatterData;
+      })
+      .find((collectionItemData: CollectionItemMatterData) => {
+        return collectionItemData.slug === `/${collectionItemSlug}`;
+      });
+
+  return {
+    title: collectionItemData?.title,
+  };
 }

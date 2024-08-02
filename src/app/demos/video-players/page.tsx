@@ -1,4 +1,9 @@
 import RemoteVideoPlayer from "@/components/remote-video-player/remote-video-player";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Video Players Demos",
+};
 
 interface VideoPlayerDemosPageProps {}
 
