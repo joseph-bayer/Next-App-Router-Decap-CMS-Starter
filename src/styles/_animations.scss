@@ -18,7 +18,7 @@
 }
 
 .animate-wind-up-spin {
-  animation: WindUpAndSpin 3s ease-in-out;
+  animation: WindUpAndSpin 1.5s ease-in-out;
 }
 
 @keyframes FadeIn {
@@ -55,11 +55,8 @@
   0% {
     transform: rotate(0);
   }
-  25% {
+  40% {
     transform: rotate(-30deg);
-  }
-  50% {
-    transform: rotate(360deg);
   }
   100% {
     transform: rotate(360deg);
