@@ -12,6 +12,7 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { attributes as MainMenuAttributes } from "../../content/site-settings/main-menu.md";
+import AlgoliaSearch from "../algolia-search/algolia-search";
 
 interface MobileMenuProps {
   isMenuOpen: boolean;
@@ -70,6 +71,9 @@ export default function MobileMenu({
               )}
             </>
           ))}
+        </div>
+        <div className="mt-8">
+          <AlgoliaSearch useMobileColors={true} />
         </div>
       </DialogPanel>
     </Dialog>

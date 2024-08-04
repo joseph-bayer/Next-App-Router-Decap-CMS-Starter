@@ -8,6 +8,8 @@ import { attributes as HomepageAttributes } from "../content/landing-pages/home.
 
 export const metadata: Metadata = {
   title: "Next.js (App Router) + Decap CMS Template",
+  description:
+    "A starter using the Next.js App Router as a frontend, Decap CMS for content management, and includes many features you may find handy!",
 };
 
 export default function Home() {

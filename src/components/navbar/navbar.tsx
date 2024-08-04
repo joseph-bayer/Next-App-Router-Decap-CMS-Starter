@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AlgoliaSearch from "../algolia-search/algolia-search";
 import GithubLogo from "../icons/github-logo";
 import Logo from "../logo/logo";
 import NavbarHamburger from "../navbar-hamburger/navbar-hamburger";
@@ -22,16 +23,27 @@ export default function Navbar({}: NavbarProps) {
           <MainMenuNavItems />
         </div>
 
-        {/* Github Logo */}
-        <div className="hidden flex-1 justify-end lg:flex">
-          <a href="https://github.com/joseph-bayer/Next-App-Router-Decap-CMS-Starter">
-            <GithubLogo
-              width={60}
-              height={60}
-              className="fill-charcoal hover:fill-dragonBall"
-            />
-            <span className="sr-only">Link to Github for this project</span>
-          </a>
+        {/* Search + Github Logo */}
+        <div className="hidden flex-1 items-center justify-end lg:flex">
+          <div className="flex items-center justify-center gap-8">
+            {/* Search */}
+            <div>
+              <AlgoliaSearch />
+            </div>
+
+            {/* Github Link */}
+            <a
+              href="https://github.com/joseph-bayer/Next-App-Router-Decap-CMS-Starter"
+              target="_blank"
+            >
+              <GithubLogo
+                width={60}
+                height={60}
+                className="fill-charcoal hover:fill-dragonBall"
+              />
+              <span className="sr-only">Link to Github for this project</span>
+            </a>
+          </div>
         </div>
 
         {/* Mobile Nav */}
