@@ -17,7 +17,7 @@ collections:
         fields:
           - { name: "title", label: "Title", widget: "string" }
   - name: "collection-item"
-    label: "CollectionItem"
+    label: "Collection Item"
     folder: src/content/collection-items
     create: true
     fields:
@@ -35,6 +35,33 @@ collections:
           - { label: "alt", name: "alt", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Content", name: "content", widget: "markdown" }
+  - name: "misc-pages"
+    label: "Misc. Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "src/content/misc-pages/about.md"
+        fields:
+          - label: "People"
+            name: "people"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: "name", widget: string }
+              - label: "Image"
+                name: "image"
+                widget: object
+                fields:
+                  - { label: "src", name: "src", widget: "image" }
+                  - { label: "alt", name: "alt", widget: "string" }
+              - { label: "Role", name: "role", widget: string }
+          - label: "FAQ"
+            name: "faq"
+            widget: list
+            summary: "{{fields.buttonText}}"
+            fields:
+              - { label: "Button Text", name: "buttonText", widget: string }
+              - { label: "Panel Text", name: "panelText", widget: markdown }
   - name: "site-settings"
     label: "Site Settings"
     files:

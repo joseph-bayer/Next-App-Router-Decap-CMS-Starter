@@ -3,6 +3,7 @@ import BypassBlock from "@/components/bypass-block/bypass-block";
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { Josefin_Sans, Luckiest_Guy } from "next/font/google";
+import localFont from "next/font/local";
 import GlobalContextWrapper from "../context/global-context";
 import "../styles/globals.scss";
 
@@ -19,6 +20,12 @@ const indie_flower_font = Luckiest_Guy({
   weight: ["400"],
 });
 
+const gomarice_nandaka_western = localFont({
+  src: "../assets/fonts/gomarice_nandaka_western.woff2",
+  display: "swap",
+  variable: "--font-gomarice-nandaka-western",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +34,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${josefin_sans_font.variable} ${indie_flower_font.variable}`}
+      className={`${josefin_sans_font.variable} ${indie_flower_font.variable} ${gomarice_nandaka_western.variable}`}
     >
       <body className="min-h-screen">
         <GlobalContextWrapper>

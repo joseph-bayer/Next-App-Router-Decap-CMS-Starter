@@ -1,0 +1,85 @@
+@use "../../styles/variables" as *;
+
+.poster {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 2rem 3rem 2rem;
+  background-color: $wantedPoster;
+  color: $coffee;
+  width: 320px;
+  height: 524px;
+  text-transform: uppercase;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5);
+  perspective: 1000px;
+  pointer-events: none;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+
+    width: 100%;
+    height: 100%;
+
+    content: "";
+
+    background-image: linear-gradient(
+        265deg,
+        rgba(0, 0, 0, 0.2),
+        transparent 15%
+      ),
+      linear-gradient(5deg, rgba(0, 0, 0, 0.2), transparent 15%),
+      linear-gradient(-5deg, rgba(0, 0, 0, 0.1), transparent 15%),
+      linear-gradient(5deg, rgba(0, 0, 0, 0.1), transparent 15%),
+      linear-gradient(-265deg, rgba(0, 0, 0, 0.2), transparent 15%),
+      linear-gradient(-5deg, rgba(0, 0, 0, 0.2), transparent 15%),
+      linear-gradient(266deg, rgba(0, 0, 0, 0.2), transparent 15%);
+
+    background-size:
+      50% 33.3333%,
+      50% 33.3333%,
+      50% 33.3333%,
+      50% 33.3333%,
+      50% 33.3333%,
+      50% 33.3333%,
+      50% 33.3333%;
+    background-position:
+      left top,
+      left top,
+      right top,
+      left center,
+      right center,
+      right center,
+      left bottom;
+  }
+
+  .posterImg {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: sepia(30%) saturate(50%);
+  }
+}
+
+.nail {
+  position: relative;
+  z-index: 11;
+  border-radius: 100%;
+  background-color: gray;
+  padding: 0.5rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    top: 0.5rem;
+    border: 30px solid transparent;
+    border-top: 20px solid transparent;
+    border-top-color: gray;
+    width: 0;
+    height: 0;
+  }
+}

@@ -25,6 +25,12 @@ export default function Attributions() {
           Wagon Wheel Vectors by Vecteezy
         </a>
       </li>
+      <li>
+        <span>Western Flourish</span>
+        <a href="https://www.vecteezy.com/free-vector/western-ornaments">
+          Western Ornaments Vectors by Vecteezy
+        </a>
+      </li>
     </ul>
   );
 }

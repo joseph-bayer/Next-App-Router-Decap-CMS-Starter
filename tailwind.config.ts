@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // TODO: use vars for colors?
   theme: {
     extend: {
       colors: {
@@ -13,8 +14,10 @@ const config: Config = {
         dragonBall: "#e76a24",
         vegeta: "#1c4595",
         shenron: "#4DA167",
-        trunks: "#5D2E8C",
+        oldRose: "#EDC9AF",
         coffee: "#702911",
+        cowboyHat: "#B6885A",
+        wantedPoster: "#FFDDAD",
         charcoal: "#24292f",
         offBlack: "#01080a",
         offWhite: "#e7e5e8",
@@ -22,6 +25,7 @@ const config: Config = {
       fontFamily: {
         "josefin-sans": ["var(--font-josefin-sans)"],
         "indie-flower": ["var(--font-indie-flower)"],
+        "gomarice-nandaka-western": ["var(--font-gomarice-nandaka-western)"],
       },
       height: {
         navHeight: "76px",
