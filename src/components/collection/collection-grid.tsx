@@ -39,7 +39,9 @@ export default function CollectionGrid({
                       maxWidth: "300px",
                     }}
                   />
-                  <div className="text-2xl font-black text-superSaiyan">
+                  <div
+                    className={`text-2xl font-black ${index % 2 === 0 ? "text-vegeta" : "text-coffee"}`}
+                  >
                     {collectionItem.title}
                   </div>
                 </Link>

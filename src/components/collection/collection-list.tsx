@@ -20,7 +20,7 @@ export default function CollectionList({
           return (
             <Link
               href={`/collection/${collectionItem.slug}`}
-              className="animate-fade-in fade-in-2s mx-auto flex max-h-[400px] w-full flex-row gap-8 rounded-t-2xl border-b-4 border-dragonBall bg-offWhite/25 p-8 transition-all duration-300 ease-in-out hover:scale-[1.01] hover:bg-offWhite/50 md:mx-[unset]"
+              className={`animate-fade-in fade-in-2s mx-auto flex max-h-[400px] w-full flex-row gap-8 rounded-t-2xl border-b-4 bg-offWhite/25 p-8 transition-all duration-300 ease-in-out hover:scale-[1.01] hover:bg-offWhite/50 md:mx-[unset] ${index % 2 === 0 ? "border-vegeta" : "border-coffee"}`}
               key={`${collectionItem.slug}-${index}`}
             >
               <Image
@@ -38,7 +38,9 @@ export default function CollectionList({
                 }}
               />
               <div className="flex flex-col gap-4">
-                <div className="text-2xl font-black text-superSaiyan">
+                <div
+                  className={`text-2xl font-black ${index % 2 === 0 ? "text-vegeta" : "text-coffee"}`}
+                >
                   {collectionItem.title}
                 </div>
                 <div className="line-clamp-[9] text-ellipsis whitespace-pre-wrap break-words text-xl text-offBlack">

@@ -19,7 +19,7 @@ export default function CollectionDisplay({
   return (
     <div
       id="collection-grid"
-      className="relative h-full min-h-[50vh] overflow-hidden bg-vegeta p-12"
+      className="relative h-full min-h-[50vh] overflow-hidden bg-shenron p-12"
     >
       {/* BG Overlay */}
       <div className="cactus-highlight-3 absolute right-[25%] top-[50px] h-full w-full bg-cover bg-top"></div>
