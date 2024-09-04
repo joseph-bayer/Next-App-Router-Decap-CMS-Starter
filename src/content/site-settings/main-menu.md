@@ -22,5 +22,7 @@ navItems:
         relativeUrl: /privacy-policy
       - title: Attributions
         relativeUrl: /attributions
+      - title: Contact
+        relativeUrl: /contact
     title: About
 ---

@@ -16,6 +16,75 @@ collections:
         file: "src/content/landing-pages/home.md"
         fields:
           - { name: "title", label: "Title", widget: "string" }
+  - name: "form"
+    label: "Form"
+    folder: src/content/forms
+    create: true
+    fields:
+      - label: "Rows"
+        name: "rows"
+        widget: "list"
+        fields:
+          - label: "Row Label"
+            name: "rowLabel"
+            widget: string
+            required: false
+          - label: "Fields"
+            name: "fields"
+            widget: "list"
+            types:
+              - label: "String"
+                name: "string"
+                widget: "object"
+                summary: "{{fields.id}}"
+                fields:
+                  - { label: "Id", name: "id", widget: "string" }
+                  - {
+                      label: "Label",
+                      name: "label",
+                      widget: "string",
+                      required: false,
+                    }
+                  - label: "Required"
+                    name: "required"
+                    widget: "object"
+                    required: false
+                    fields:
+                      - {
+                          label: "Is Required?",
+                          name: "isRequired",
+                          widget: "boolean",
+                          required: false,
+                        }
+                      - {
+                          label: "Error Text",
+                          name: "errorText",
+                          widget: "string",
+                          required: false,
+                        }
+                  - label: "Pattern Validation"
+                    name: "patternValidation"
+                    widget: "object"
+                    required: false
+                    fields:
+                      - {
+                          label: "Pattern",
+                          name: "pattern",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Error Text",
+                          name: "errorText",
+                          widget: "string",
+                          required: false,
+                        }
+                  - {
+                      label: "Placeholder",
+                      name: "Placeholder",
+                      widget: string,
+                      required: false,
+                    }
   - name: "collection-item"
     label: "Collection Item"
     folder: src/content/collection-items
